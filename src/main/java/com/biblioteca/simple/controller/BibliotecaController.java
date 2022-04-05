@@ -38,8 +38,14 @@ public class BibliotecaController {
         return bibliotecaservice.status(id);
     }
 
+    @PutMapping(value="/biblioteca/prestar/{id}")
+    public String prestarRecurso(@PathVariable("id")String id){
+        return bibliotecaservice.prestarRecurso(id);
+    }
 
-
-
+    @PutMapping(value="/biblioteca/devolver/{id}")
+    public String devolverRecurso(@PathVariable("id")String id){
+        return bibliotecaservice.devolverRecurso(id);
+    }
 
 }
